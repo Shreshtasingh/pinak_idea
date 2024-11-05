@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divs with Circles</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"> <!-- Remix Icon CDN -->
+    <style>
+        /* Custom styles for child divs and circles */
+        .child {
+            margin-top: 10%; /* 25% margin from the top */
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 20px; /* 20px bottom margin */
+            height: 430px; /* Increased height */
+            width:25rem;
+            position: relative;
+        }
+        .circle {
+            width: 80px;       /* Circle diameter */
+            height: 80px;
+            background-color: #1e40af; /* Dark blue color */
+            border-radius: 50%; /* Makes the div a circle */
+            position: absolute;
+            top: -40px; /* Adjusts circle position to sit at the top of child div */
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+           
+        }
+        .circle1 {
+    background-image: url('emergency-call\ \(2\).png'); /* Replace with actual image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.circle2 {
+    background-image: url('leak.png'); /* Replace with actual image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Repeat for additional circles */
+.circle3 {
+    background-image: url('droplet.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.circle4 {
+    background-image: url('heater.png');
+    background-size: cover;
+    background-position: center;
+}
+
+        /* Flex container for text content */
+        .content {
+            display: flex;
+            flex-direction: column; /* Keep it column layout for stacking */
+            justify-content: center; /* Center items vertically */
+            align-items: center; /* Align items to the start horizontally */
+            width: 100%; /* Full width to consume space */
+            padding: 0 20px; /* Horizontal padding */
+            flex-grow: 1; /* Allow this section to grow and push the button down */
+        }
+        /* Button styling */
+        .button {
+            background-color: #1e40af; /* Same color as the circle */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            margin-top: auto; /* Push the button to the bottom */
+        }
+        .main-bg {
+            background-image: url('https://images.unsplash.com/photo-1706523869158-8fcf6ad998ad?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Assignment Div Wrapper -->
+    <div id="assignment" class="w-screen h-screen p-2 bg-gray-100">
+        <div class="h-full w-full p-10  shadow-lg rounded-lg flex flex-col justify-start main-bg bg-white bg-opacity-90">
+            <h1 class="font-bold text-5xl">OUR SERVICES</h1>
+
+            <!-- Flex container for child divs -->
+            <div class="flex gap-4 flex">
+
+                <!-- Child Divs with Circle on Top -->
+                <div class="child flex flex-col items-center bg-blue-300 rounded-lg shadow-md p-10">
+                    <div class="circle circle1">
+                       
+                    </div>
+                    
+                    <div class="content mt-4">
+                        <h1 class="font-bold text-lg">Emergency Plumbing Services</h1>
+                        <h2 class="w-full mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, voluptatem. Dolores impedit sapiente numquam consectetur illum est qui dolorum suscipit?</h2>
+                    </div>
+                    <button class="button flex items-center justify-between w-48">
+                         View Next
+                        <i class="ri-arrow-right-s-line"></i> <!-- Remix Icon right arrow -->
+                    </button>
+                </div>
+                <div class="child flex flex-col items-center bg-blue-300 rounded-lg shadow-md p-10">
+                    <div class="circle circle2"></div>
+                    <div class="content mt-4">
+                        <h1 class="font-bold text-lg">Plumbing and Drains</h1>
+                        <h2 class="w-full mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nemo excepturi autem quod eveniet modi quas repudiandae inventore quidem commodi.</h2>
+                    </div>
+                    <button class="button flex items-center justify-between w-48">
+                         View Next
+                        <i class="ri-arrow-right-s-line"></i> <!-- Remix Icon right arrow -->
+                    </button>
+                </div>
+                <div class="child flex flex-col items-center bg-blue-300 rounded-lg shadow-md p-10">
+                    <div class="circle circle3"></div>
+                    <div class="content mt-4">
+                        <h1 class="font-bold text-lg">Water Damage</h1>
+                        <h2 class="w-full mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sunt dicta cumque, non enim eum repudiandae corrupti cum eligendi ad.</h2>
+                    </div>
+                    <button class="button flex items-center justify-between w-48">
+                         View Next
+                        <i class="ri-arrow-right-s-line"></i> <!-- Remix Icon right arrow -->
+                    </button>
+                </div>
+                <div class="child flex flex-col items-center bg-blue-300 rounded-lg shadow-md p-10">
+                    <div class="circle circle4"></div>
+                    <div class="content mt-4">
+                        <h1 class="font-bold text-lg">Water Heaters</h1>
+                        <h2 class="w-full mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, explicabo aperiam libero harum repellat dolor assumenda ipsam enim? Nostrum, cumque.</h2>
+                    </div>
+                    <button class="button flex items-center justify-between w-48 ">
+                         View Next
+                        <i class="ri-arrow-right-s-line"></i> <!-- Remix Icon right arrow -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+        // Select all elements with the class 'child'
+        document.querySelectorAll('.child').forEach(child => {
+            // Add mouseenter event listener to trigger rotation
+            child.addEventListener('mouseenter', () => {
+                gsap.to(child, { rotation: 360, duration: 1, ease: 'linear' });
+            });
+
+            // Add mouseleave event listener to reset rotation
+            child.addEventListener('mouseleave', () => {
+                gsap.to(child, { rotation: 0, duration: 1, ease:'linear' });
+            });
+        });
+    </script>
+
+</body>
+</html>
